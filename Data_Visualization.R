@@ -1,0 +1,16 @@
+library(tidyverse)
+print(Orange)
+file = data.frame(Orange)
+print(file)
+print(?Orange)
+# Data Analysis.
+print(dim(file))
+print(colnames(file))
+print(summary(file))
+# Data Visualization.
+print(ggplot(data = file) + geom_bar(mapping = aes(x = age)))
+print(ggplot(data = file) + geom_histogram(mapping = aes(x = circumference), binwidth = 0.2))
+print(ggplot(data = file) + geom_histogram(mapping = aes(x = circumference), binwidth = 0.3) + facet_wrap(~Tree))
+#print(ggplot(data = file, mapping = aes (x = circumference, colour = cut)) + geom_freqpoly(binwidth = 0.1))
+print(ggplot(data = file) + geom_point(mapping = aes(x = age, y = circumference)))
+print(ggplot(data = file, mapping = aes(x = Tree, y = age)) + geom_boxplot(mapping = aes(group = cut_width(Tree, 0.2))))
